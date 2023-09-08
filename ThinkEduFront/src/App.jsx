@@ -6,7 +6,6 @@ import Home from "../src/components/pages/home/Home"
 import Login from "../src/components/pages/login/Login"
 import Studentstable from "../src/components/pages/stundentstable/studentstable"
 import Navbar from "../src/components/layout/navbar/navbar"
-import Footer from "./components/layout/Footer/footer"
 
 const App = () => {
   return (
@@ -38,7 +37,7 @@ const App = () => {
           
         
       </BrowserRouter>
-    //  <Footer/>
+    
   
     </div>
   )

@@ -4,18 +4,18 @@ import { Container, Nav, Navbar } from "react-bootstrap";
 function ColorSchemesExample() {
     return (
       <>
-        <Navbar bg="dark" data-bs-theme="dark">
+        <Navbar style={{ backgroundColor: '#9977AA'}} data-bs-theme="dark">
           <Container>
             <Navbar.Brand href="#home">ThinkEdu</Navbar.Brand>
-            <Nav className="me-auto">
-              <Nav.Link href="#home">Home</Nav.Link>
-              <Nav.Link href="#features">Students</Nav.Link>
-              <Nav.Link href="#pricing">Subjects</Nav.Link>
+            <Nav className="ml-0">
+              <Nav.Link href="#home" className="mx-2">Home</Nav.Link>
+              <Nav.Link href="#features" className="mx-2">Students</Nav.Link>
+              <Nav.Link href="#pricing" className="mx-2">Subjects</Nav.Link>
             </Nav>
           </Container>
         </Navbar>
-        </>
-  );
-}
-
-export default ColorSchemesExample;
+      </>
+    );
+  }
+  
+  export default ColorSchemesExample;
