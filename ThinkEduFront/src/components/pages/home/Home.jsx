@@ -1,34 +1,101 @@
-import React from 'react'
-import { Container, Form, Button, Row, Col } from 'react-bootstrap'
+import React, { useState } from 'react';
+import { Container, Form, Button, Row, Col, Alert } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
+
 const Home = () => {
+  const [formData, setFormData] = useState({
+    username: '',
+    password: '',
+  });
+
+  const [errors, setErrors] = useState({
+    username: '',
+    password: '',
+  });
+
+  const validateForm = () => {
+    let valid = true;
+    const newErrors = { ...errors };
+
+    if (formData.username.trim() === '') {
+      newErrors.username = 'Usuario es requerido';
+      valid = false;
+    } else {
+      newErrors.username = '';
+    }
+
+    if (formData.password.trim() === '') {
+      newErrors.password = 'Contraseña es requerida';
+      valid = false;
+    } else {
+      newErrors.password = '';
+    }
+
+    setErrors(newErrors);
+    return valid;
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (validateForm()) {
+      console.log('Inicio de sesión exitoso');
+    } else {
+      console.log('El formulario contiene errores');
+    }
+  };
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
+  };
+
   return (
-    <Container>
-    <Row className="justify-content-center mt-5">
-      <Col xs={6}>
-        <Form>
-          <Form.Group controlId="formBasicEmail">
-            <Form.Label>Usuario</Form.Label>
-            <Form.Control type="text" placeholder="Ingresa tu usuario" />
-          </Form.Group>
+    <Container className="mt-5" >
+      <Row className="justify-content-center">
+      <Col md={6} className="login-container">
+          <h2 className="mb-4">Iniciar sesión</h2>
+          <Form onSubmit={handleSubmit}>
+            <Form.Group controlId="formBasicUsername">
+              <Form.Label>Usuario</Form.Label>
+              <Form.Control
+                type="text"
+                name="username"
+                placeholder="Ingresa tu usuario"
+                value={formData.username}
+                onChange={handleChange}
+                isInvalid={!!errors.username}
+              />
+              <Form.Control.Feedback type="invalid">
+                {errors.username}
+              </Form.Control.Feedback>
+            </Form.Group>
 
-          <Form.Group controlId="formBasicPassword" className='mb-3'>
-            <Form.Label>Contraseña</Form.Label>
-            <Form.Control type="password" placeholder="Contraseña" />
-          </Form.Group>
+            <Form.Group controlId="formBasicPassword">
+              <Form.Label>Contraseña</Form.Label>
+              <Form.Control
+                type="password"
+                name="password"
+                placeholder="Contraseña"
+                value={formData.password}
+                onChange={handleChange}
+                isInvalid={!!errors.password}
+              />
+              <Form.Control.Feedback type="invalid">
+                {errors.password}
+              </Form.Control.Feedback>
+            </Form.Group>
 
-          <Form.Group controlId="formBasicCheckbox">
+            <Button variant="primary" type="submit" className="mr-2" size="sm">
+              Iniciar sesión
+            </Button>
+            <Form.Group controlId="formBasicCheckbox">
             <Form.Check type="checkbox" label="Recordar contraseña" />
           </Form.Group>
+          </Form>
+        </Col>
+      </Row>
+    </Container>
+  );
+};
 
-          <Button variant="primary" type="submit">
-            Iniciar Sesión
-          </Button>
-        </Form>
-      </Col>
-    </Row>
-  </Container>
-
-  )
-}
-
-export default Home
+export default Home;
