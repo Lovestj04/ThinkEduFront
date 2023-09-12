@@ -1,34 +1,33 @@
-import React, { useState } from 'react';
-import { Container, Form, Button, Row, Col, Alert } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+import React, { useState } from "react";
+import { Container, Row, Col, Form, Button } from "react-bootstrap";
 
-const Home = () => {
+const Login = () => {
   const [formData, setFormData] = useState({
-    username: '',
-    password: '',
+    username: "",
+    password: "",
   });
 
   const [errors, setErrors] = useState({
-    username: '',
-    password: '',
+    username: "",
+    password: "",
   });
 
   const validateForm = () => {
     let valid = true;
     const newErrors = { ...errors };
 
-    if (formData.username.trim() === '') {
-      newErrors.username = 'Usuario es requerido';
+    if (formData.username.trim() === "") {
+      newErrors.username = "Usuario es requerido";
       valid = false;
     } else {
-      newErrors.username = '';
+      newErrors.username = "";
     }
 
-    if (formData.password.trim() === '') {
-      newErrors.password = 'Contraseña es requerida';
+    if (formData.password.trim() === "") {
+      newErrors.password = "Contraseña es requerida";
       valid = false;
     } else {
-      newErrors.password = '';
+      newErrors.password = "";
     }
 
     setErrors(newErrors);
@@ -38,9 +37,9 @@ const Home = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (validateForm()) {
-      console.log('Inicio de sesión exitoso');
+      console.log("Inicio de sesión exitoso");
     } else {
-      console.log('El formulario contiene errores');
+      console.log("El formulario contiene errores");
     }
   };
 
@@ -50,9 +49,9 @@ const Home = () => {
   };
 
   return (
-    <Container className="mt-5" >
+    <Container className="mt-5">
       <Row className="justify-content-center">
-      <Col md={6} className="login-container">
+        <Col md={6} className="login-container">
           <h2 className="mb-4">Iniciar sesión</h2>
           <Form onSubmit={handleSubmit}>
             <Form.Group controlId="formBasicUsername">
@@ -85,12 +84,13 @@ const Home = () => {
               </Form.Control.Feedback>
             </Form.Group>
 
+            <Form.Group controlId="formBasicCheckbox">
+              <Form.Check type="checkbox" label="Recordar contraseña" />
+            </Form.Group>
+
             <Button variant="primary" type="submit" className="mr-2" size="sm">
               Iniciar sesión
             </Button>
-            <Form.Group controlId="formBasicCheckbox">
-            <Form.Check type="checkbox" label="Recordar contraseña" />
-          </Form.Group>
           </Form>
         </Col>
       </Row>
@@ -98,4 +98,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default Login;
