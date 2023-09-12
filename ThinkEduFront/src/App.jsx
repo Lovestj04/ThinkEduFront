@@ -4,7 +4,7 @@ import Subjects from "../src/components/pages/Subjects"
 import Error from "../src/components/pages/Error404"
 import Login from "./components/pages/login/Login"
 import Studentstable from "../src/components/pages/stundentstable/studentstable"
-import Navbar from "../src/components/layout/navbar/navbar"
+//import Navbar from "../src/components/layout/navbar/navbar"
 import Home from "./components/pages/home/Home"
 import Footer from "./components/layout/footer/footer"
 import './app.css'
@@ -14,7 +14,6 @@ const App = () => {
     <div>
       
       <BrowserRouter>
-      <Navbar/>
         <Routes>
           <Route>
           <Route exact path="/Home" element={<Home />} />

@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import { Container, Row, Col, Form, Button } from "react-bootstrap";
+import LoginNavbar from "./LoginNavbar"; // Importa el Navbar personalizado para la página de inicio de sesión
 
-const Login = () => {
+function Login() {
   const [formData, setFormData] = useState({
     username: "",
     password: "",
@@ -49,53 +50,56 @@ const Login = () => {
   };
 
   return (
-    <Container className="mt-5">
-      <Row className="justify-content-center">
-        <Col md={6} className="login-container">
-          <h2 className="mb-4">Iniciar sesión</h2>
-          <Form onSubmit={handleSubmit}>
-            <Form.Group controlId="formBasicUsername">
-              <Form.Label>Usuario</Form.Label>
-              <Form.Control
-                type="text"
-                name="username"
-                placeholder="Ingresa tu usuario"
-                value={formData.username}
-                onChange={handleChange}
-                isInvalid={!!errors.username}
-              />
-              <Form.Control.Feedback type="invalid">
-                {errors.username}
-              </Form.Control.Feedback>
-            </Form.Group>
+    <>
+      <LoginNavbar /> {/* Usar el Navbar personalizado para la página de inicio de sesión */}
+      <Container className="mt-5">
+        <Row className="justify-content-center">
+          <Col md={6} className="login-container">
+            <h2 className="mb-4">Iniciar sesión</h2>
+            <Form onSubmit={handleSubmit}>
+              <Form.Group controlId="formBasicUsername">
+                <Form.Label>Usuario</Form.Label>
+                <Form.Control
+                  type="text"
+                  name="username"
+                  placeholder="Ingresa tu usuario"
+                  value={formData.username}
+                  onChange={handleChange}
+                  isInvalid={!!errors.username}
+                />
+                <Form.Control.Feedback type="invalid">
+                  {errors.username}
+                </Form.Control.Feedback>
+              </Form.Group>
 
-            <Form.Group controlId="formBasicPassword">
-              <Form.Label>Contraseña</Form.Label>
-              <Form.Control
-                type="password"
-                name="password"
-                placeholder="Contraseña"
-                value={formData.password}
-                onChange={handleChange}
-                isInvalid={!!errors.password}
-              />
-              <Form.Control.Feedback type="invalid">
-                {errors.password}
-              </Form.Control.Feedback>
-            </Form.Group>
+              <Form.Group controlId="formBasicPassword">
+                <Form.Label>Contraseña</Form.Label>
+                <Form.Control
+                  type="password"
+                  name="password"
+                  placeholder="Contraseña"
+                  value={formData.password}
+                  onChange={handleChange}
+                  isInvalid={!!errors.password}
+                />
+                <Form.Control.Feedback type="invalid">
+                  {errors.password}
+                </Form.Control.Feedback>
+              </Form.Group>
 
-            <Form.Group controlId="formBasicCheckbox">
-              <Form.Check type="checkbox" label="Recordar contraseña" />
-            </Form.Group>
+              <Form.Group controlId="formBasicCheckbox">
+                <Form.Check type="checkbox" label="Recordar contraseña" />
+              </Form.Group>
 
-            <Button variant="primary" type="submit" className="mr-2" size="sm">
-              Iniciar sesión
-            </Button>
-          </Form>
-        </Col>
-      </Row>
-    </Container>
+              <Button variant="primary" type="submit" className="mr-2" size="sm">
+                Iniciar sesión
+              </Button>
+            </Form>
+          </Col>
+        </Row>
+      </Container>
+    </>
   );
-};
+}
 
 export default Login;

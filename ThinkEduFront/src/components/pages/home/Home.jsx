@@ -1,9 +1,11 @@
 import React from "react";
-import { Container, Nav, Navbar, ListGroup } from "react-bootstrap";
+import { Container, ListGroup } from "react-bootstrap";
+import ColorSchemesExample from "./Navbarhome"
 
 function Home() {
   return (
     <>
+    <ColorSchemesExample />
      <Container className="mt-4">
         <h1>Administración</h1>
         <ListGroup as="ol" className="custom-ol">
