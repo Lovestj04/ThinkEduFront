@@ -1,1 +1,1 @@
-export {default} from "./studentstable"
+export {default} from "./Studentstable"
