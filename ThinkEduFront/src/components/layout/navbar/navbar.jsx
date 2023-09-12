@@ -8,7 +8,7 @@ function ColorSchemesExample() {
           <Container>
             <Navbar.Brand href="/">ThinkEdu</Navbar.Brand>
             <Nav className="ml-0">
-              <Nav.Link href="/" className="mx-2">Home</Nav.Link>
+              <Nav.Link href="/Home" className="mx-2">Home</Nav.Link>
               <Nav.Link href="/Studentstable" className="mx-2">Students</Nav.Link>
               <Nav.Link href="/Subjects" className="mx-2">Subjects</Nav.Link>
             </Nav>

@@ -65,3 +65,14 @@ footer {
   background-color: #9977AA;
 }
 
+/* styles.css */
+.custom-ol {
+  list-style-type: square; /* Cambia el estilo de viñetas */
+  margin-left: 20px; /* Agrega margen izquierdo para la lista ordenada */
+  font-size: 18px; /* Tamaño de fuente para la lista */
+}
+
+.custom-li {
+  color: #333; /* Cambia el color de texto de los elementos de lista */
+  margin-top: 8px; /* Agrega margen superior entre elementos de lista */
+}
