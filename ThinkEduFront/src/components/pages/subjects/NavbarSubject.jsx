@@ -1,7 +1,7 @@
 import React from "react";
 import { Container, Nav, Navbar } from "react-bootstrap";
 
-function ColorSchemesExample() {
+function ColorSchemesExample2() {
     return (
       <>
         <Navbar style={{ backgroundColor: '#9977AA'}} data-bs-theme="dark">
@@ -18,4 +18,4 @@ function ColorSchemesExample() {
     );
   }
   
-  export default ColorSchemesExample;
+  export default ColorSchemesExample2;
