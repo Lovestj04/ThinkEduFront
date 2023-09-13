@@ -9,7 +9,7 @@ const Error404 = () => {
           <h1>¡Error 404!</h1>
           <p>La página que buscas no existe.</p>
           <img
-            src="ruta-al-gif.gif"
+            src="https://media1.giphy.com/media/8L0Pky6C83SzkzU55a/giphy.gif?cid=6c09b95273olec4lgjp1qz1u5wcd7naxvw18rt5p8cpdi5bg&ep=v1_gifs_search&rid=giphy.gif&ct=g"
             alt="Error 404"
             style={{ maxWidth: '100%', height: 'auto' }}
           />
