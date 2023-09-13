@@ -9,6 +9,7 @@ import Home from "./components/pages/home/Home"
 import Footer from "./components/layout/footer/footer"
 import './app.css'
 
+
 const App = () => {
   return (
     <div>
@@ -43,5 +44,4 @@ const App = () => {
     </div>
   )
 }
-
 export default App
