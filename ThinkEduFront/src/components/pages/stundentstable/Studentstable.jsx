@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import { Container, Table, Button, Modal, Form, Alert } from "react-bootstrap";
+import ColorSchemesExample3 from "./NavbarStudent"
+import './styles.css'
 
 function Studentstable() {
   const [students, setStudents] = useState([
@@ -87,6 +89,8 @@ function Studentstable() {
   };
 
   return (
+    <>
+    <ColorSchemesExample3/>
     <Container className="mt-4">
       <h1>Lista de Alumnos</h1>
       <Table striped bordered hover>
@@ -204,15 +208,16 @@ function Studentstable() {
           </Form>
         </Modal.Body>
         <Modal.Footer>
-          <Button variant="secondary" onClick={() => setShowModal(false)}>
+          <Button variant="secondary"  onClick={() => setShowModal(false)}>
             Cancelar
           </Button>
-          <Button variant="primary" onClick={handleCreateStudent}>
+          <Button variant="primary" className="button-create"  onClick={handleCreateStudent}>
             Crear Alumno
           </Button>
         </Modal.Footer>
       </Modal>
     </Container>
+    </>
   );
 }
 
