@@ -1,80 +1,59 @@
 // src/TablaDetalleCursado.js
 import React from 'react';
-import { Container, Table,} from 'react-bootstrap';
+import Accordion from 'react-bootstrap/Accordion';
+import Table from 'react-bootstrap/Table';
 import ColorSchemesExample2 from "./NavbarSubject"
 
-const data = [
-  { materia: 'Matemáticas', año: 1, nota: 8 },
-  { materia: 'Lengua y Literatura', año: 1, nota: 9 },
-  { materia: 'Biología', año: 1, nota: 7 },
-  { materia: 'Física', año: 1, nota: 8 },
-  { materia: 'Química', año: 1, nota: 6 },
-  { materia: 'Economía', año: 1, nota: 9 },
-  { materia: 'Geografía', año: 1, nota: 7 },
-  { materia: 'Historia', año: 1, nota: 8 },
-  { materia: 'Educación Física', año: 1, nota: 10 },
-  // Año 2
-  { materia: 'Matemáticas', año: 2, nota: 9 },
-  { materia: 'Lengua y Literatura', año: 2, nota: 8 },
-  { materia: 'Biología', año: 2, nota: 7 },
-  { materia: 'Física', año: 2, nota: 8 },
-  { materia: 'Química', año: 2, nota: 7 },
-  { materia: 'Economía', año: 2, nota: 8 },
-  { materia: 'Geografía', año: 2, nota: 9 },
-  { materia: 'Historia', año: 2, nota: 8 },
-  { materia: 'Educación Física', año: 2, nota: 9 },
-  // Año 3
-  { materia: 'Matemáticas', año: 3, nota: 10 },
-  { materia: 'Lengua y Literatura', año: 3, nota: 9 },
-  { materia: 'Biología', año: 3, nota: 8 },
-  { materia: 'Física', año: 3, nota: 9 },
-  { materia: 'Química', año: 3, nota: 8 },
-  { materia: 'Economía', año: 3, nota: 9 },
-  { materia: 'Geografía', año: 3, nota: 7 },
-  { materia: 'Historia', año: 3, nota: 10 },
-  { materia: 'Educación Física', año: 3, nota: 10 },
-  // Año 4
-  { materia: 'Matemáticas', año: 4, nota: 10 },
-  { materia: 'Lengua y Literatura', año: 4, nota: 9 },
-  { materia: 'Biología', año: 4, nota: 8 },
-  { materia: 'Física', año: 4, nota: 10 },
-  { materia: 'Química', año: 4, nota: 9 },
-  { materia: 'Economía', año: 4, nota: 10 },
-  { materia: 'Geografía', año: 4, nota: 9 },
-  { materia: 'Historia', año: 4, nota: 10 },
-  { materia: 'Educación Física', año: 4, nota: 10 },
-];
+function Subjects() {
+  const years = [1, 2, 3, 4];
+  const subjects = [
+    "Matemáticas",
+    "Lengua y Literatura",
+    "Biología",
+    "Física",
+    "Química",
+    "Economía",
+    "Geografía",
+    "Historia",
+    "Educación Física"
+  ];
 
-const Subjects = () => {
+  const generateRandomGrade = () => {
+    return (Math.random() * 7 + 4).toFixed(1);
+  };
+
   return (
-  
-    <>
-    <ColorSchemesExample2 />
+    <div>
+      {/* Agrega ColorSchemesExample2 aquí */}
+      <ColorSchemesExample2 />
 
-    
-    <Container className="mt-4">
-
-    <Table striped bordered hover>
-      <thead>
-        <tr>
-          <th>Materia</th>
-          <th>Año</th>
-          <th>Nota Final</th>
-        </tr>
-      </thead>
-      <tbody>
-        {data.map((item, index) => (
-          <tr key={index}>
-            <td>{item.materia}</td>
-            <td>{item.año}</td>
-            <td>{item.nota}</td>
-          </tr>
+      <Accordion defaultActiveKey="0">
+        {years.map((year, index) => (
+          <Accordion.Item eventKey={index.toString()} key={index}>
+            <Accordion.Header>Año {year}</Accordion.Header>
+            <Accordion.Body>
+              <Table striped bordered hover>
+                <thead>
+                  <tr>
+                    <th>Materia</th>
+                    <th>Nota Final</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {subjects.map((subject, subjectIndex) => (
+                    <tr key={subjectIndex}>
+                      <td>{subject}</td>
+                      <td>{generateRandomGrade()}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </Table>
+            </Accordion.Body>
+          </Accordion.Item>
         ))}
-      </tbody>
-    </Table>
-    </Container>
-    </>
+      </Accordion>
+    </div>
   );
-};
+}
 
 export default Subjects;
