@@ -7,9 +7,11 @@ import { MdLogout } from "react-icons/md";
 function ColorSchemesExample() {
   return (
     <>
-      <Navbar style={{ backgroundColor: '#9977AA' }} data-bs-theme="dark">
-        <Container>
-          <Navbar.Brand href="/"> <PiBrain size="2rem" className="mb-2"/> ThinkEdu</Navbar.Brand>
+    <Navbar collapseOnSelect expand="lg" style={{ backgroundColor: '#9977AA' }} variant="dark">
+      <Container>
+        <Navbar.Brand href="/"> <PiBrain size="2rem" className="mb-2"/> ThinkEdu</Navbar.Brand>
+        <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+        <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="mx-auto">
             <Nav.Link href="/Home" className="mx-2">
               <BiHomeAlt2 size="2rem" className="mb-2"/> Home
@@ -20,9 +22,10 @@ function ColorSchemesExample() {
           <Nav>
             <Nav.Link className="ml-2"><MdLogout size="2rem" className="mb-2" />Logout</Nav.Link>
           </Nav>
-        </Container>
-      </Navbar>
-    </>
+        </Navbar.Collapse>
+      </Container>
+    </Navbar>
+  </>
   );
 }
 
