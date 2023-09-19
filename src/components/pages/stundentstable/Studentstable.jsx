@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Container, Table, Button, Modal, Form, Alert } from "react-bootstrap";
 import ColorSchemesExample3 from "./NavbarStudent";
-import "./styles.css";
+import "./Styles.css";
 
 function Studentstable() {
   const [students, setStudents] = useState([
