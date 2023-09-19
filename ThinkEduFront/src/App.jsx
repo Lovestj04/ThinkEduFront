@@ -1,8 +1,8 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Aboutus from "../src/components/pages/Aboutus";
-import Subjects from "../src/components/pages/Subjects";
-import Error from "../src/components/pages/Error404";
-import Login from "../src/components/pages/Login";
+import Aboutus from "./components/pages/Aboutus/About";
+import Subjects from "./components/pages/subjects/Subjects";
+import Error from "./components/pages/Error404/Error";
+import Login from "./components/pages/Login/Login";
 import Studentstable from "./components/pages/stundentstable/Studentstable";
 import Home from "./components/pages/home/Home";
 import Footer from "./components/layout/footer/footer";
