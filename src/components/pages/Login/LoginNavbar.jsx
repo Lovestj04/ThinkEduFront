@@ -7,7 +7,7 @@ function LoginNavbar() {
     <>
       <Navbar style={{ backgroundColor: "#9977AA" }} data-bs-theme="dark">
         <Container>
-          <Navbar.Brand to="/">
+          <Navbar.Brand to="Home">
             <PiBrain size="2rem" className="mb-2" /> ThinkEdu
           </Navbar.Brand>
         </Container>
