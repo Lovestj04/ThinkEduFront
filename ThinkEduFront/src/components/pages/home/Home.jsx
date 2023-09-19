@@ -1,37 +1,37 @@
 import React from "react";
 import { Container, ListGroup } from "react-bootstrap";
-import ColorSchemesExample from "./Navbarhome"
+import ColorSchemesExample from "./Navbarhome";
 
 function Home() {
   return (
     <>
-    <ColorSchemesExample />
-     <Container className="mt-4">
+      <ColorSchemesExample />
+      <Container className="mt-4">
         <h1>Administración</h1>
         <ListGroup as="ol" className="custom-ol">
           <ListGroup.Item as="li" className="custom-li">
-            Nombre: 
+            Nombre:
           </ListGroup.Item>
           <ListGroup.Item as="li" className="custom-li">
-            Apellido: 
+            Apellido:
           </ListGroup.Item>
           <ListGroup.Item as="li" className="custom-li">
             Fecha de Ingreso:
           </ListGroup.Item>
           <ListGroup.Item as="li" className="custom-li">
-            Contacto: 
+            Contacto:
           </ListGroup.Item>
           <ListGroup.Item as="li" className="custom-li">
-            ID: 
+            ID:
           </ListGroup.Item>
           <ListGroup.Item as="li" className="custom-li">
-            Nombre de Institución: 
+            Nombre de Institución:
           </ListGroup.Item>
           <ListGroup.Item as="li" className="custom-li">
-            Contacto de Institución: 
+            Contacto de Institución:
           </ListGroup.Item>
           <ListGroup.Item as="li" className="custom-li">
-            Dirección: 
+            Dirección:
           </ListGroup.Item>
         </ListGroup>
       </Container>

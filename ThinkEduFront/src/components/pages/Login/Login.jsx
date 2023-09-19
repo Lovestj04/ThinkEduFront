@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Container, Row, Col, Form, Button } from "react-bootstrap";
-import LoginNavbar from "./LoginNavbar"; 
+import LoginNavbar from "./LoginNavbar";
 
 function Login() {
   const [formData, setFormData] = useState({
@@ -51,7 +51,7 @@ function Login() {
 
   return (
     <>
-      <LoginNavbar /> 
+      <LoginNavbar />
       <Container className="mt-5">
         <Row className="justify-content-center">
           <Col md={6} className="login-container">
@@ -91,7 +91,12 @@ function Login() {
                 <Form.Check type="checkbox" label="Recordar contraseña" />
               </Form.Group>
 
-              <Button variant="primary" type="submit" className="mr-2" size="sm">
+              <Button
+                variant="primary"
+                type="submit"
+                className="mr-2"
+                size="sm"
+              >
                 Iniciar sesión
               </Button>
             </Form>

@@ -1,8 +1,8 @@
 // src/TablaDetalleCursado.js
-import React from 'react';
-import Accordion from 'react-bootstrap/Accordion';
-import Table from 'react-bootstrap/Table';
-import ColorSchemesExample2 from "./NavbarSubject"
+import React from "react";
+import Accordion from "react-bootstrap/Accordion";
+import Table from "react-bootstrap/Table";
+import ColorSchemesExample2 from "./NavbarSubject";
 
 function Subjects() {
   const years = [1, 2, 3, 4];
@@ -15,7 +15,7 @@ function Subjects() {
     "Economía",
     "Geografía",
     "Historia",
-    "Educación Física"
+    "Educación Física",
   ];
 
   const generateRandomGrade = () => {
