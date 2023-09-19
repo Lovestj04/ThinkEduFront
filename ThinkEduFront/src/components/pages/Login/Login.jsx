@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Container, Row, Col, Form, Button } from "react-bootstrap";
-import LoginNavbar from "./LoginNavbar"; // Importa el Navbar personalizado para la página de inicio de sesión
+import LoginNavbar from "./LoginNavbar"; 
 
 function Login() {
   const [formData, setFormData] = useState({
@@ -51,7 +51,7 @@ function Login() {
 
   return (
     <>
-      <LoginNavbar /> {/* Usar el Navbar personalizado para la página de inicio de sesión */}
+      <LoginNavbar /> 
       <Container className="mt-5">
         <Row className="justify-content-center">
           <Col md={6} className="login-container">
