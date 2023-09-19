@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Container, Table, Button, Modal, Form, Alert } from "react-bootstrap";
 import ColorSchemesExample3 from "./NavbarStudent";
-import './styles.css';
+import "./styles.css";
 
 function Studentstable() {
   const [students, setStudents] = useState([
@@ -110,7 +110,9 @@ function Studentstable() {
                   <td>{student.anioCursado}</td>
                   <td>{student.numeroExpediente}</td>
                   <td>
-                    <span style={{ color: student.cuotaAlDia ? "green" : "orange" }}>
+                    <span
+                      style={{ color: student.cuotaAlDia ? "green" : "orange" }}
+                    >
                       {student.cuotaAlDia ? "Sí" : "No"}
                     </span>
                   </td>
@@ -186,7 +188,10 @@ function Studentstable() {
                   placeholder="Año de cursado del alumno"
                   value={newStudent.anioCursado}
                   onChange={(e) =>
-                    setNewStudent({ ...newStudent, anioCursado: e.target.value })
+                    setNewStudent({
+                      ...newStudent,
+                      anioCursado: e.target.value,
+                    })
                   }
                 />
               </Form.Group>
@@ -213,7 +218,11 @@ function Studentstable() {
             <Button variant="secondary" onClick={() => setShowModal(false)}>
               Cancelar
             </Button>
-            <Button variant="primary" className="button-create" onClick={handleCreateStudent}>
+            <Button
+              variant="primary"
+              className="button-create"
+              onClick={handleCreateStudent}
+            >
               Crear Alumno
             </Button>
           </Modal.Footer>
