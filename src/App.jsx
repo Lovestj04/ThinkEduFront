@@ -6,7 +6,7 @@ import Login from "./components/pages/Login/Login";
 import Studentstable from "./components/pages/stundentstable/Studentstable";
 import Home from "./components/pages/home/Home";
 import Footer from "./components/layout/footer/footer";
-import "./app.css";
+import "./App.css";
 
 const App = () => {
   return (
