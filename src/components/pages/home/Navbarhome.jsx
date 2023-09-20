@@ -32,11 +32,12 @@ function ColorSchemesExample() {
               </NavLink>
               <NavLink to="/Subjects" className="nav-link active mx-2">
                 {" "}
-                <BiBookBookmark size="2rem" className="mb-2" /> Subjects{" "}
+                <BiBookBookmark size="2rem" className="mb-2" /> Subjects
+                {" "}
               </NavLink>
             </Nav>
             <Nav>
-              <NavLink className="nav-link active mx-2">
+              <NavLink className="nav-link active mx-2" to="/">
                 <MdLogout size="2rem" className="mb-2" />
                 Logout
               </NavLink>

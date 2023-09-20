@@ -22,21 +22,21 @@ function ColorSchemesExample3() {
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="mx-auto">
-              <Nav.Link to="/Home" className="mx-2">
+              <Nav.Link to="/Home" className="nav-link active mx-2">
                 <BiHomeAlt2 size="2rem" className="mb-2" /> Home
               </Nav.Link>
-              <Nav.Link to="/Studentstable" className="mx-2">
+              <Nav.Link to="/Studentstable" className="nav-link active mx-2">
                 {" "}
                 <PiStudentBold size="2rem" className="mb-2" />
                 Students
               </Nav.Link>
-              <Nav.Link to="/Subjects" className="mx-2">
+              <Nav.Link to="/Subjects" className="nav-link active mx-2">
                 {" "}
                 <BiBookBookmark size="2rem" className="mb-2" /> Subjects{" "}
               </Nav.Link>
             </Nav>
             <Nav>
-              <Nav.Link className="ml-2">
+              <Nav.Link className="nav-link active mx-2" to="/">
                 <MdLogout size="2rem" className="mb-2" />
                 Logout
               </Nav.Link>
