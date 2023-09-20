@@ -3,6 +3,7 @@ import { Container, Nav, Navbar } from "react-bootstrap";
 import { PiBrain, PiStudentBold } from "react-icons/pi";
 import { BiBookBookmark, BiHomeAlt2 } from "react-icons/bi";
 import { MdLogout } from "react-icons/md";
+import { NavLink } from "react-router-dom";
 
 function ColorSchemesExample3() {
   return (

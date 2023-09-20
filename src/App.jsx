@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route} from "react-router-dom";
 import Aboutus from "./components/pages/Aboutus/About";
 import Subjects from "./components/pages/subjects/Subjects";
 import Error from "./components/pages/Error404/Error";
