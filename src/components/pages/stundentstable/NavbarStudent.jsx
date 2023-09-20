@@ -15,10 +15,10 @@ function ColorSchemesExample3() {
         variant="dark"
       >
         <Container>
-          <Navbar.Brand to="/">
+          <NavLink className="nav-link active" to="/">
             {" "}
             <PiBrain size="2rem" className="mb-2" /> ThinkEdu
-          </Navbar.Brand>
+          </NavLink>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="mx-auto">
