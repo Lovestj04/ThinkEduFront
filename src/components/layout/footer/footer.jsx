@@ -8,7 +8,7 @@ const Footer = () => {
       <footer style={{ backgroundColor: '#9977AA', color: 'white' }}>
         <Container>
           
-           <Link className="nav-link text-white" to="/"> <p>© Copyright 2023Eduthink - All Rights Reserved  </p></Link>
+           <Link className="nav-link text-white" to="/Aboutus"> <p>© Copyright 2023Eduthink - All Rights Reserved  </p></Link>
          
         </Container>
       </footer>
