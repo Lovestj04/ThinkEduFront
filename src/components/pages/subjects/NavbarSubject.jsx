@@ -15,22 +15,22 @@ function ColorSchemesExample2() {
         variant="dark"
       >
         <Container>
-          <NavLink to="Home" className="nav-link active ">
+          <NavLink className="nav-link active " to="Home" >
             {" "}
             <PiBrain size="2rem" className="mb-2" /> ThinkEdu
           </NavLink>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="mx-auto">
-              <NavLink to="/Home" className="nav-link active mx-2">
+              <NavLink className="nav-link active mx-2" to="/Home" >
                 <BiHomeAlt2 size="2rem" className="mb-2" /> Home
               </NavLink>
-              <NavLink to="/Studentstable" className="nav-link active mx-2">
+              <NavLink className="nav-link active mx-2" to="/Studentstable" >
                 {" "}
                 <PiStudentBold size="2rem" className="mb-2" />
                 Students
               </NavLink>
-              <NavLink to="/Subjects" className="nav-link active mx-2">
+              <NavLink className="nav-link active mx-2" to="/Subjects" >
                 {" "}
                 <BiBookBookmark size="2rem" className="mb-2" /> Subjects{" "}
               </NavLink>
