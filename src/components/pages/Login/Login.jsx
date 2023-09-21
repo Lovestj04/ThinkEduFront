@@ -108,9 +108,7 @@ const Login = () => {
                 </Form.Control.Feedback>
               </Form.Group>
 
-              <Form.Group controlId="formBasicCheckbox">
-                <Form.Check type="checkbox" label="Recordar contraseña" />
-              </Form.Group>
+              
 
               <Button
                 variant="primary"
