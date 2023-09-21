@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { Container, Table, Button, Modal, Form, Alert } from "react-bootstrap";
 import ColorSchemesExample3 from "./NavbarStudent";
-import "./Styles.css";
 
 function Studentstable() {
   const [students, setStudents] = useState([
@@ -14,7 +13,7 @@ function Studentstable() {
       cuotaAlDia: true,
       activo: true,
     },
-    // Agregar más alumnos aquí
+
   ]);
 
   const [showModal, setShowModal] = useState(false);
@@ -32,12 +31,10 @@ function Studentstable() {
   const [showError, setShowError] = useState(false);
 
   const handleViewDetails = (id) => {
-    // Lógica para ver detalles del alumno
     console.log("Ver detalles del alumno con ID:", id);
   };
 
   const handleDeactivate = (id) => {
-    // Lógica para dar de baja a un alumno
     console.log("Dar de baja al alumno con ID:", id);
     const updatedStudents = students.map((student) =>
       student.id === id ? { ...student, activo: false } : student
@@ -46,16 +43,13 @@ function Studentstable() {
   };
 
   const handleCreateStudent = () => {
-    // Validar que se completen todos los campos obligatorios
     if (!newStudent.nombre || !newStudent.apellido || !newStudent.anioCursado) {
       setShowError(true);
       return;
     }
 
-    // Generar un ID único aleatorio
-    const randomId = Math.floor(Math.random() * 1000000); // Cambia 1000000 según tus necesidades
+    const randomId = Math.floor(Math.random() * 1000000); 
 
-    // Lógica para crear un nuevo alumno con el ID aleatorio
     setStudents([
       ...students,
       {
@@ -63,7 +57,7 @@ function Studentstable() {
         nombre: newStudent.nombre,
         apellido: newStudent.apellido,
         anioCursado: newStudent.anioCursado,
-        numeroExpediente: randomId.toString(), // Convertir el ID a cadena
+        numeroExpediente: randomId.toString(), 
         cuotaAlDia: newStudent.cuotaAlDia,
         activo: newStudent.activo,
       },
@@ -80,8 +74,8 @@ function Studentstable() {
       activo: true,
     });
 
-    setRandomId(randomId); // Actualizar el estado del ID aleatorio
-    setShowError(false); // Ocultar el mensaje de error
+    setRandomId(randomId); 
+    setShowError(false); 
   };
 
   return (
@@ -91,7 +85,6 @@ function Studentstable() {
         <h1>Lista de Alumnos</h1>
         <div className="table-responsive">
           <Table striped bordered hover>
-            {/* Cabecera de la tabla */}
             <thead>
               <tr>
                 <th>Nombre Apellido</th>
@@ -146,7 +139,6 @@ function Studentstable() {
           Crear Alumno Nuevo
         </Button>
 
-        {/* Modal para crear un nuevo alumno */}
         <Modal show={showModal} onHide={() => setShowModal(false)}>
           <Modal.Header closeButton>
             <Modal.Title>Crear Alumno Nuevo</Modal.Title>
@@ -158,7 +150,6 @@ function Studentstable() {
               </Alert>
             )}
             <Form>
-              {/* Campos de formulario para el nuevo alumno */}
               <Form.Group controlId="nombre">
                 <Form.Label>Nombre</Form.Label>
                 <Form.Control
@@ -207,11 +198,9 @@ function Studentstable() {
                       numeroExpediente: e.target.value,
                     })
                   }
-                  disabled // Deshabilitar la edición del ID
+                  disabled 
                 />
               </Form.Group>
-              {/* Otros campos del formulario */}
-              {/* ... */}
             </Form>
           </Modal.Body>
           <Modal.Footer>

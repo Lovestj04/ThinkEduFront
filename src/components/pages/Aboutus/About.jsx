@@ -14,7 +14,6 @@ const Aboutus = () => {
             <Card.Body className="text-center">
               <Card.Title>Jonathan Gomez</Card.Title>
               <Card.Text>
-                This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
               </Card.Text>
             </Card.Body>
             <Card.Footer>
@@ -25,7 +24,6 @@ const Aboutus = () => {
             <Card.Body className="text-center">
               <Card.Title>Facundo Chavez</Card.Title>
               <Card.Text>
-                This card has supporting text below as a natural lead-in to additional content.
               </Card.Text>
             </Card.Body>
             <Card.Footer>
@@ -38,7 +36,6 @@ const Aboutus = () => {
             <Card.Body className="text-center">
               <Card.Title>Franco Cali</Card.Title>
               <Card.Text>
-                This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.
               </Card.Text>
             </Card.Body>
             <Card.Footer>
@@ -49,7 +46,6 @@ const Aboutus = () => {
             <Card.Body className="text-center">
               <Card.Title>Cande Demelchiorre</Card.Title>
               <Card.Text>
-                This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.
               </Card.Text>
             </Card.Body>
             <Card.Footer>

@@ -1,11 +1,10 @@
-/* App.css */
 
 body {
   margin: 0;
   padding: 0;
   display: flex;
   flex-direction: column;
-  min-height: 100vh; /* Establece el tamaño mínimo de la ventana para que el footer quede abajo */
+  min-height: 100vh; 
 }
 
 
@@ -18,7 +17,7 @@ body {
 }
 
 .container {
-  flex: 1; /* Esto hace que el contenido ocupe todo el espacio disponible */
+  flex: 1; 
 }
 
 footer {
@@ -31,7 +30,6 @@ footer {
   
 }
 
-/* App.css */
 .login-container {
   background-color: #f5f5f5;
   border: 1px solid #ddd;
@@ -39,7 +37,6 @@ footer {
   border-radius: 5px;
   box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
 }
-/* App.css */
 .login-container input[type="text"],
 .login-container input[type="password"] {
   width: 100%;
@@ -49,7 +46,6 @@ footer {
   border-radius: 5px;
   font-size: 16px;
 }
-/* App.css */
 .login-container button[type="submit"] {
   background-color: #9977AA;
   color: #fff;
@@ -64,14 +60,13 @@ footer {
   background-color: #9977AA;
 }
 
-/* styles.css */
 .custom-ol {
-  list-style-type: square; /* Cambia el estilo de viñetas */
-  margin-left: 20px; /* Agrega margen izquierdo para la lista ordenada */
-  font-size: 18px; /* Tamaño de fuente para la lista */
+  list-style-type: square; 
+  margin-left: 20px; 
+  font-size: 18px;
 }
 
 .custom-li {
-  color: #333; /* Cambia el color de texto de los elementos de lista */
-  margin-top: 8px; /* Agrega margen superior entre elementos de lista */
+  color: #333; 
+  margin-top: 8px; 
 }
