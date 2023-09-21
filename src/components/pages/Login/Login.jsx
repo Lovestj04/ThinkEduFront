@@ -1,8 +1,11 @@
 import React, { useState } from "react";
 import { Container, Row, Col, Form, Button } from "react-bootstrap";
-import LoginNavbar from "./LoginNavbar";
+import { useNavigate } from "react-router";
+import instance from "../../../../api/axios";
 
-function Login() {
+const Login = () => {
+  const navigate = useNavigate();
+
   const [formData, setFormData] = useState({
     username: "",
     password: "",
@@ -35,10 +38,29 @@ function Login() {
     return valid;
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     if (validateForm()) {
-      console.log("Inicio de sesión exitoso");
+      try {
+        const user = {
+          email: formData.username,
+          password: formData.password,
+        };
+
+        const res = await instance.post("/auth/login", user);
+        const user_token = res.data.token;
+
+        // Almacena el token en el almacenamiento local
+        localStorage.setItem("token", user_token);
+
+        // Redirige al usuario a la página principal o a donde quieras después del inicio de sesión
+        navigate("/");
+      } catch (error) {
+        console.log(error);
+
+        // Muestra un mensaje de error al usuario
+        alert("Inicio de sesión fallido. Verifica tus credenciales.");
+      }
     } else {
       console.log("El formulario contiene errores");
     }
@@ -51,7 +73,6 @@ function Login() {
 
   return (
     <>
-      <LoginNavbar />
       <Container className="mt-5">
         <Row className="justify-content-center">
           <Col md={6} className="login-container">
@@ -105,6 +126,6 @@ function Login() {
       </Container>
     </>
   );
-}
+};
 
 export default Login;

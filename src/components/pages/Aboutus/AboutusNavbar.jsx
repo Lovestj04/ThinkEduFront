@@ -13,7 +13,6 @@ function AboutusNavbar() {
               <PiBrain size="2rem" className="mb-2" /> ThinkEdu
             </NavLink>
           </Navbar.Brand>
-        
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="ml-auto">
             </Nav>
