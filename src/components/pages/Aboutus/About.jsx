@@ -8,10 +8,9 @@ const Aboutus = () => {
   return (
     <>
       <AboutusNavbar />
-      <div className="container mt-4 mb-4"> {/* Agrega la clase mb-4 para el margen inferior */}
+      <div className="container mt-4 mb-4"> 
         <Row>
           <Card className="col-xs-12 col-sm-6 col-md-6 col-lg-6 mb-4">
-            <Card.Img variant="top" src="/public/jhoni.jpg" className="mx-auto d-block" style={{ width: '300px', height: '200px' }} />
             <Card.Body className="text-center">
               <Card.Title>Jonathan Gomez</Card.Title>
               <Card.Text>
@@ -23,7 +22,6 @@ const Aboutus = () => {
             </Card.Footer>
           </Card>
           <Card className="col-xs-12 col-sm-6 col-md-6 col-lg-6 mb-4">
-            <Card.Img variant="top" src="/public/facu.jpg" className="mx-auto d-block" style={{ width: '300px', height: '200px' }} />
             <Card.Body className="text-center">
               <Card.Title>Facundo Chavez</Card.Title>
               <Card.Text>
@@ -37,7 +35,6 @@ const Aboutus = () => {
         </Row>
         <Row>
           <Card className="col-xs-12 col-sm-6 col-md-6 col-lg-6 mb-4">
-            <Card.Img variant="top" src="/public/franco.jpg" className="mx-auto d-block" style={{ width: '300px', height: '200px' }} />
             <Card.Body className="text-center">
               <Card.Title>Franco Cali</Card.Title>
               <Card.Text>
@@ -49,7 +46,6 @@ const Aboutus = () => {
             </Card.Footer>
           </Card>
           <Card className="col-xs-12 col-sm-6 col-md-6 col-lg-6 mb-4">
-            <Card.Img variant="top" src="/public/cande.jpg" className="mx-auto d-block" style={{ width: '300px', height: '200px' }} />
             <Card.Body className="text-center">
               <Card.Title>Cande Demelchiorre</Card.Title>
               <Card.Text>
@@ -57,7 +53,7 @@ const Aboutus = () => {
               </Card.Text>
             </Card.Body>
             <Card.Footer>
-              <small className="text-muted">TEAM FRONTEND</small>
+              <small className="text-muted">TEAM BACKEND</small>
             </Card.Footer>
           </Card>
         </Row>

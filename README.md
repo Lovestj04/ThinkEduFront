@@ -1,5 +1,5 @@
 # Proyecto de Administración Escolar [Frontend]
-![Logo](../THINK-EDU/src/img/BannerThinkEdu.png)
+![Logo](../ThinkEduFront/public/BannerThinkEdu.png)
 
 > El código está disponible en la rama [THINK-EDU - main](https://github.com/Lovestj04/ThinkEduFront/tree/main)
 
