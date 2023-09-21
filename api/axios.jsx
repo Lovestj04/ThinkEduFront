@@ -6,7 +6,7 @@ console.log(url);
 
 const instance = axios.create({
 
-    baseURL: url ? url :"http://localhost:4000/api",
+    baseURL: url ? url :"https://think-edu.onrender.com/",
     timeout: 1000, 
     headers: ['content-type":"aplication/json']
 }) ;
