@@ -9,7 +9,7 @@ function AboutusNavbar() {
       <Navbar collapseOnSelect expand="lg" style={{ backgroundColor: "#9977AA" }} variant="dark">
         <Container>
           <Navbar.Brand>
-            <NavLink className="nav-link active" to="/Home">
+            <NavLink className="nav-link active text-white" to="/Home">
               <PiBrain size="2rem" className="mb-2" /> ThinkEdu
             </NavLink>
           </Navbar.Brand>

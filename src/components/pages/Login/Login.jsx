@@ -3,6 +3,8 @@ import { Container, Row, Col, Form, Button } from "react-bootstrap";
 import { useNavigate } from "react-router";
 import instance from "../../../../api/axios";
 
+
+
 const Login = () => {
   const navigate = useNavigate();
 
@@ -47,7 +49,7 @@ const Login = () => {
           password: formData.password,
         };
 
-        const res = await instance.post("/auth/login", user);
+        const res = await instance.post("api/login", user);
         const user_token = res.data.token;
 
         // Almacena el token en el almacenamiento local
@@ -110,12 +112,12 @@ const Login = () => {
 
               
 
-              <Button
+              <Button 
                 variant="primary"
                 type="submit"
                 className="mr-2"
                 size="sm"
-              >
+              > <Link className="nav-link text-white" to="/Home"></Link>
                 Iniciar sesión
               </Button>
             </Form>
