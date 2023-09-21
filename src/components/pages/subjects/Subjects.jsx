@@ -1,4 +1,3 @@
-// src/TablaDetalleCursado.js
 import React from "react";
 import Accordion from "react-bootstrap/Accordion";
 import Table from "react-bootstrap/Table";
@@ -26,6 +25,9 @@ function Subjects() {
     <div>
       {/* Agrega ColorSchemesExample2 aquí */}
       <ColorSchemesExample2 />
+
+      {/* Agrega el título "Alumno Lionel Messi" */}
+      <h3>Alumno: Lionel Andres Messi 🐐</h3>
 
       <Accordion defaultActiveKey="0">
         {years.map((year, index) => (

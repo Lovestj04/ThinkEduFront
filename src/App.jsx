@@ -22,8 +22,9 @@ const App = () => {
             <Route exact path="*" element={<Error />} />
           </Route>
         </Routes>
+        <Footer />
       </BrowserRouter>
-      <Footer />
+     
     </div>
   );
 };
