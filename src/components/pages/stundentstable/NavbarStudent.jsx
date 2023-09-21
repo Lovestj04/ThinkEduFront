@@ -15,7 +15,7 @@ function ColorSchemesExample3() {
         variant="dark"
       >
         <Container>
-          <NavLink className="nav-link active" to="/">
+          <NavLink className="nav-link active text-white" to="/">
             {" "}
             <PiBrain size="2rem" className="mb-2" /> ThinkEdu
           </NavLink>
