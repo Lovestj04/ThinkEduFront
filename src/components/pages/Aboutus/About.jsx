@@ -3,7 +3,7 @@ import Card from 'react-bootstrap/Card';
 import CardGroup from 'react-bootstrap/CardGroup';
 import Row from 'react-bootstrap/Row';
 import AboutusNavbar from './AboutusNavbar';
-
+import { Link } from 'react-router-dom/dist';
 const Aboutus = () => {
   return (
     <>
@@ -14,6 +14,7 @@ const Aboutus = () => {
             <Card.Body className="text-center">
               <Card.Title>Jonathan Gomez</Card.Title>
               <Card.Text>
+              <Link className="nav-link text-white" to="/*">lkdjflkjsal</Link>
               </Card.Text>
             </Card.Body>
             <Card.Footer>
